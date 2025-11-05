@@ -5,12 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Green Brasil - Início</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav').classList.toggle('active');
+      document.querySelector('.hamburger').classList.toggle('active');
+    }
+  </script>
 </head>
 <body>
-  <header class="layout">
-    <h1>All Green Brasil</h1>
+  <header class="container">
+    <div class="nav-container">
+      <h1 class="brand">All Green Brasil</h1>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a>
+          <ul>
+            <li><a href="#ambientais">Ambientais</a></li>
+            <li><a href="#educacionais">Educacionais</a></li>
+          </ul>
+        </li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
   </header>
-  <main>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Bem-vindo à All Green Brasil</h2>
+      <p>Juntos, promovemos sustentabilidade e transformamos comunidades.</p>
+    </section>
+
     <section class="project-list">
       <article class="project">
         <img src="images/projeto-plantar.jpg" alt="Projeto Plantar">
@@ -21,10 +51,21 @@
           <a href="#" class="btn">Saiba mais</a>
         </div>
       </article>
+
+      <article class="project">
+        <img src="images/projeto-agua.jpg" alt="Projeto Água Viva">
+        <div class="project-content">
+          <h3>Projeto Água Viva</h3>
+          <p>Preservação dos recursos hídricos e conscientização social.</p>
+          <span class="badge badge-info">Novo</span>
+          <a href="#" class="btn">Participar</a>
+        </div>
+      </article>
     </section>
   </main>
-  <footer>
-    <p>© 2025 All Green Brasil</p>
+
+  <footer class="container">
+    <p>© 2025 All Green Brasil — Rua das Palmeiras, 245 - Vila Mariana, São Paulo - SP</p>
   </footer>
 </body>
 </html>
